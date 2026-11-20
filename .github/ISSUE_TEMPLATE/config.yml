@@ -1,0 +1,7 @@
+# Blank issues are off so every issue arrives through a form and so carries a label;
+# the platform-request count is read by label (public-feedback-channel design D3).
+blank_issues_enabled: false
+contact_links:
+  - name: aidlc docs
+    url: https://aidlc.rodrigoasensio.com/docs/
+    about: How a command or a phase works. Check here before reporting a bug.

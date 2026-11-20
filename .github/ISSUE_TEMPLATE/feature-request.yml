@@ -1,0 +1,28 @@
+name: Feature request
+description: Something aidlc should do and does not. Use this for anything that is not a bug.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What do you need?
+      description: What you are trying to get done, and where aidlc gets in the way or falls short.
+    validations:
+      required: true
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Agent tool
+      options:
+        - Claude Code
+        - Codex
+        - Other
+    validations:
+      required: false
+  - type: textarea
+    id: today
+    attributes:
+      label: What do you do today instead?
+      description: The workaround, if you have one.
+    validations:
+      required: false

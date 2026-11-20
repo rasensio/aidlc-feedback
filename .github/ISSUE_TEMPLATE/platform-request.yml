@@ -1,0 +1,46 @@
+name: Platform request
+description: Ask for aidlc to support your agent tool. aidlc 2 supports Claude Code and Codex.
+title: "Platform request: "
+labels: [platform-request]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        aidlc 2 supports Claude Code and Codex only. Each request here is counted, and the count is
+        read when deciding what to support. If someone already asked for your platform, a 👍 on
+        their issue counts as well.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Which platform do you need?
+      options:
+        - Cursor
+        - Windsurf
+        - Kiro
+        - GitHub Copilot
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: other
+    attributes:
+      label: If Other, which one?
+    validations:
+      required: false
+  - type: textarea
+    id: why
+    attributes:
+      label: What do you use aidlc for on it?
+      description: A sentence is enough. It helps weigh one request against another.
+    validations:
+      required: false
+  - type: dropdown
+    id: staying
+    attributes:
+      label: Are you staying on aidlc 1.x for now?
+      options:
+        - "Yes"
+        - "No, I stopped using aidlc"
+        - "No, I moved to Claude Code or Codex"
+    validations:
+      required: false

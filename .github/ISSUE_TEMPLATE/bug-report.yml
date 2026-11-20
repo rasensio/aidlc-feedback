@@ -1,0 +1,53 @@
+name: Bug report
+description: Something in aidlc broke or did the wrong thing.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Before you paste any output:** remove secrets, tokens, API keys and private paths from it.
+        This repo is public, and anything posted here can be read by anyone.
+  - type: input
+    id: version
+    attributes:
+      label: aidlc version
+      description: The output of `aidlc --version`.
+      placeholder: "2.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Agent tool
+      description: Which agent tool were you using aidlc with?
+      options:
+        - Claude Code
+        - Codex
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The commands you ran, in order.
+      placeholder: |
+        1. aidlc init --platform claude-code
+        2. aidlc start quick-feature
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected, and what happened instead
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: Error text or output, with secrets, tokens and private paths removed.
+      render: text
+    validations:
+      required: false
